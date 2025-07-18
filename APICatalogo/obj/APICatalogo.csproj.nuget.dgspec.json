@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\APICatalogo.csproj": {}
+    "E:\\dotnetEstudos\\APICatalogo\\apicatalogo\\APICatalogo.csproj": {}
   },
   "projects": {
-    "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\APICatalogo.csproj": {
+    "E:\\dotnetEstudos\\APICatalogo\\apicatalogo\\APICatalogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
+        "projectUniqueName": "E:\\dotnetEstudos\\APICatalogo\\apicatalogo\\APICatalogo.csproj",
         "projectName": "APICatalogo",
-        "projectPath": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
+        "projectPath": "E:\\dotnetEstudos\\APICatalogo\\apicatalogo\\APICatalogo.csproj",
         "packagesPath": "C:\\Users\\b-ebe\\.nuget\\packages\\",
-        "outputPath": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\obj\\",
+        "outputPath": "E:\\dotnetEstudos\\APICatalogo\\apicatalogo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
