@@ -430,8 +430,8 @@
             "format": "int32"
           },
           "nome": {
-            "maxLength": 80,
-            "minLength": 0,
+            "maxLength": 20,
+            "minLength": 5,
             "type": "string"
           },
           "descricao": {
