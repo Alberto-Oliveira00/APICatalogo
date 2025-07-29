@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Models;
+using APICatalogo.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,50 +11,30 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ICategoriaRepository _repository;
 
-        public CategoriasController(AppDbContext context)
+        public CategoriasController(ICategoriaRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            try
-            {
-                return _context.Categorias.AsNoTracking().ToList();
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Ocorreu um problema ao tratar a sua solicitação...");
-            }            
-        }
-
-        [HttpGet("produtos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
-        {
-            return _context.Categorias.Include(c => c.Produtos).Where(c => c.CategoriaId <= 5).ToList();
+            var categorias = _repository.GetCategoria();
+            return Ok(categorias);
         }
 
         [HttpGet("{id:int}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
-            try
-            {
-                var categoria = _context.Categorias.FirstOrDefault(c => c.CategoriaId == id);
+            var categoria = _repository.GetCategoria(id);
 
-                if (categoria is null)
-                    return NotFound("Categoria não encontrada...");
-
-                return Ok(categoria);
-            }
-            catch (Exception)
+            if (categoria is null)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Ocorreu um problema ao tratar a sua solicitação...");
+                return NotFound($"Categoria com id= {id} não encontrada...");
             }
+            return Ok(categoria);
         }
 
         [HttpPost]
@@ -62,11 +43,10 @@ namespace APICatalogo.Controllers
             if (categoria is null)
                 return BadRequest("Categoria inválida...");
 
-            _context.Categorias.Add(categoria);
-            _context.SaveChanges();
+            var categoriaCriada = _repository.Create(categoria);
 
             return new CreatedAtRouteResult("ObterCategoria",
-                new { id = categoria.CategoriaId }, categoria);
+                new { id = categoriaCriada.CategoriaId }, categoriaCriada);
         }
 
         [HttpPut("{id:int}")]
@@ -76,35 +56,23 @@ namespace APICatalogo.Controllers
             {
                 return BadRequest($"Categoria com id= {id} não encontrada...");
             }
-            _context.Entry(categoria).State = EntityState.Modified;
-            _context.SaveChanges();
+
+            _repository.Update(categoria);
             return Ok(categoria);
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            try
+            var categoria = _repository.GetCategoria(id);
+
+            if (categoria is null)
             {
-                var categoria = _context.Categorias.FirstOrDefault(c => c.CategoriaId == id);
-
-                if (categoria is null)
-                {
-                    return NotFound($"Categoria com id= {id} não encontrada...");
-                }
-
-                _context.Categorias.Remove(categoria);
-                _context.SaveChanges();
-                return Ok("Categoria excluída com sucesso...");
-            }
-            catch (Exception)
-            {
-
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Ocorreu um problema ao tratar a sua solicitação...");
+                return NotFound($"Categoria com id= {id} não encontrada...");
             }
 
-            
+            var categoriaExcluida = _repository.Delete(id);
+            return Ok(categoriaExcluida);
         }
     }
 }
