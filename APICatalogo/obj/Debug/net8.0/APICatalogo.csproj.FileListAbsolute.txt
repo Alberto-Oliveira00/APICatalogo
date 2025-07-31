@@ -10,6 +10,11 @@ E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Azure.Core.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Azure.Identity.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Humanizer.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\JetBrains.Annotations.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -32,6 +37,8 @@ E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.C
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -73,6 +80,8 @@ E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\System.Security.Permis
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\System.Text.Json.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -168,10 +177,10 @@ E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.build.
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.build.json.cache
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.development.json
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatal.C7776A93.Up2Date
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\refint\APICatalogo.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.pdb
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
+E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
