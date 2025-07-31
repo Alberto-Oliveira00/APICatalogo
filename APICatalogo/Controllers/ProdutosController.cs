@@ -3,7 +3,9 @@ using APICatalogo.DTOs;
 using APICatalogo.Models;
 using APICatalogo.Repositories;
 using AutoMapper;
+using Azure;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -78,6 +80,34 @@ public class ProdutosController : ControllerBase
         return new CreatedAtRouteResult("ObterProduto", 
             new {id = novoProduto.ProdutoId}, novoProdutoDto);
     }
+
+    [HttpPatch("{id:int}/UpdatePartial")]
+    public ActionResult<ProdutoDTOUpdateResponse> Patch(int id, 
+        JsonPatchDocument<ProdutoDTOUpdateRequest> patchProdutoDTO)
+    {
+        if(patchProdutoDTO is null)
+            return BadRequest("Objeto inválido");
+
+        var produto = _uof.ProdutoRepository.Get(p => p.ProdutoId == id);
+
+        if (produto is null)
+            return NotFound($"Produto com id= {id} não encontrado");
+
+        var produtoUpdateRequest = _mapper.Map<ProdutoDTOUpdateRequest>(produto);
+
+        patchProdutoDTO.ApplyTo(produtoUpdateRequest, ModelState);
+
+        if (!ModelState.IsValid || !TryValidateModel(produtoUpdateRequest))
+            return BadRequest(ModelState);
+
+        _mapper.Map(produtoUpdateRequest, produto);
+
+        _uof.ProdutoRepository.Update(produto);
+        _uof.Commit();
+
+        return Ok(_mapper.Map<ProdutoDTOUpdateResponse>(produto));
+    }
+
 
     [HttpPut("{id:int}")]
     public ActionResult<ProdutoDTO> Put(int id, ProdutoDTO produtoDto)
