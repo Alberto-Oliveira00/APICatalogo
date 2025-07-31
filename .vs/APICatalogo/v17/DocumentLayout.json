@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "E:\\dotnetEstudos\\APICatalogo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|e:\\dotnetestudos\\apicatalogo\\apicatalogo\\repositories\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\repositories\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|e:\\dotnetestudos\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|e:\\dotnetestudos\\apicatalogo\\apicatalogo\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|e:\\dotnetestudos\\apicatalogo\\apicatalogo\\pagination\\categoriasparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\pagination\\categoriasparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|e:\\dotnetestudos\\apicatalogo\\apicatalogo\\pagination\\produtosparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BEB7261-EAE7-47C8-949C-47B7AA3032BF}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\pagination\\produtosparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +34,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "APICatalogo\\Controllers\\CategoriasController.cs",
+              "ToolTip": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "APICatalogo\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T13:03:39.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriaRepository.cs",
+              "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Repositories\\CategoriaRepository.cs",
+              "RelativeDocumentMoniker": "APICatalogo\\Repositories\\CategoriaRepository.cs",
+              "ToolTip": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Repositories\\CategoriaRepository.cs",
+              "RelativeToolTip": "APICatalogo\\Repositories\\CategoriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T13:00:17.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ICategoriaRepository.cs",
+              "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Repositories\\ICategoriaRepository.cs",
+              "RelativeDocumentMoniker": "APICatalogo\\Repositories\\ICategoriaRepository.cs",
+              "ToolTip": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Repositories\\ICategoriaRepository.cs",
+              "RelativeToolTip": "APICatalogo\\Repositories\\ICategoriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T12:59:24.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriasParameters.cs",
+              "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Pagination\\CategoriasParameters.cs",
+              "RelativeDocumentMoniker": "APICatalogo\\Pagination\\CategoriasParameters.cs",
+              "ToolTip": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Pagination\\CategoriasParameters.cs",
+              "RelativeToolTip": "APICatalogo\\Pagination\\CategoriasParameters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T12:59:00.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ProdutosParameters.cs",
               "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Pagination\\ProdutosParameters.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Pagination\\ProdutosParameters.cs",
@@ -35,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "QueryStringParameters.cs",
               "DocumentMoniker": "E:\\dotnetEstudos\\APICatalogo\\APICatalogo\\Pagination\\QueryStringParameters.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Pagination\\QueryStringParameters.cs",
@@ -43,8 +111,7 @@
               "RelativeToolTip": "APICatalogo\\Pagination\\QueryStringParameters.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T12:55:40.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T12:55:40.512Z"
             }
           ]
         }
