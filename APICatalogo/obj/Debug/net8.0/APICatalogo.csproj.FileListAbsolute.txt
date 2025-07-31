@@ -170,3 +170,4 @@ E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\runtimes\browser\lib\n
 E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.sourcelink.json
 E:\dotnetEstudos\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\dotnetEstudos\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.dll

@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Categoria"
+                    "$ref": "#/components/schemas/CategoriaDTO"
                   }
                 }
               },
@@ -26,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Categoria"
+                    "$ref": "#/components/schemas/CategoriaDTO"
                   }
                 }
               },
@@ -34,7 +34,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Categoria"
+                    "$ref": "#/components/schemas/CategoriaDTO"
                   }
                 }
               }
@@ -50,24 +50,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              }
+            }
           }
         }
       }
@@ -95,17 +112,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/CategoriaDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/CategoriaDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Categoria"
+                  "$ref": "#/components/schemas/CategoriaDTO"
                 }
               }
             }
@@ -131,24 +148,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              }
+            }
           }
         }
       },
@@ -169,7 +203,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDTO"
+                }
+              }
+            }
           }
         }
       }
@@ -198,7 +249,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               },
@@ -206,7 +257,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               },
@@ -214,7 +265,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               }
@@ -236,7 +287,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               },
@@ -244,7 +295,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               },
@@ -252,7 +303,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produto"
+                    "$ref": "#/components/schemas/ProdutoDTO"
                   }
                 }
               }
@@ -268,24 +319,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              }
+            }
           }
         }
       }
@@ -314,17 +382,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Produto"
+                  "$ref": "#/components/schemas/ProdutoDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Produto"
+                  "$ref": "#/components/schemas/ProdutoDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Produto"
+                  "$ref": "#/components/schemas/ProdutoDTO"
                 }
               }
             }
@@ -350,24 +418,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Produto"
+                "$ref": "#/components/schemas/ProdutoDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              }
+            }
           }
         }
       },
@@ -388,7 +473,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutoDTO"
+                }
+              }
+            }
           }
         }
       }
@@ -396,7 +498,7 @@
   },
   "components": {
     "schemas": {
-      "Categoria": {
+      "CategoriaDTO": {
         "required": [
           "imagemUrl",
           "nome"
@@ -420,7 +522,7 @@
         },
         "additionalProperties": false
       },
-      "Produto": {
+      "ProdutoDTO": {
         "required": [
           "descricao",
           "imagemUrl",
@@ -451,14 +553,6 @@
             "maxLength": 300,
             "minLength": 0,
             "type": "string"
-          },
-          "estoque": {
-            "type": "number",
-            "format": "float"
-          },
-          "dataCadastro": {
-            "type": "string",
-            "format": "date-time"
           },
           "categoriaId": {
             "type": "integer",
