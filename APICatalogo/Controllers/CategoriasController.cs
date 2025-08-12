@@ -4,6 +4,7 @@ using APICatalogo.Models;
 using APICatalogo.Pagination;
 using APICatalogo.Repositories;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -124,6 +125,7 @@ public class CategoriasController : ControllerBase
     }
 
     [HttpDelete("{id:int}")]
+    [Authorize(Policy ="AdminOnly")]
     public async Task<ActionResult<CategoriaDTO>> Delete(int id)
     {
         var categoria = await _uof.CategoriaRepository.GetAsync(c => c.CategoriaId == id);

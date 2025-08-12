@@ -33,6 +33,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Policy ="SuperAdminOnly")]
     [Route("CreateRole")]
     public async Task<IActionResult> CreateRole(string roleName)
     {
@@ -60,6 +61,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Policy = "SuperAdminOnly")]
     [Route("AddUserToRole")]
     public async Task<IActionResult> AddUserToRole(string email, string roleName)
     {
@@ -103,6 +105,7 @@ public class AuthController : ControllerBase
             {
                 new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(ClaimTypes.Email, user.Email!),
+                new Claim("id", user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
 
@@ -133,6 +136,7 @@ public class AuthController : ControllerBase
             });
         }
         return Unauthorized();
+        // return Forbid();
     }
 
     [HttpPost]
@@ -214,7 +218,7 @@ public class AuthController : ControllerBase
         });
     }
 
-    [Authorize]
+    [Authorize(Policy ="ExclusiveOnly")]
     [HttpPost]
     [Route("revoke/{username}")]
     public async Task<IActionResult> Revoke(string username)
