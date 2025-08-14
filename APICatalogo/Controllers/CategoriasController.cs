@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using X.PagedList;
@@ -15,6 +16,7 @@ namespace APICatalogo.Controllers;
 
 [Route("[controller]")]
 [ApiController]
+[EnableRateLimiting("fixedwindow")]
 public class CategoriasController : ControllerBase
 {
     private readonly IUnitOfWork _uof;
