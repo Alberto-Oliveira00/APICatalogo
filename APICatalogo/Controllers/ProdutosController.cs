@@ -81,13 +81,21 @@ public class ProdutosController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ProdutoDTO>>> Get()
     {
-        var produtos = await _uof.ProdutoRepository.GetAllAsync();
-        if(produtos is null)
-            return NotFound();
+        try
+        {
+            var produtos = await _uof.ProdutoRepository.GetAllAsync();
+            if (produtos is null)
+                return NotFound();
 
-        var produtosDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
+            var produtosDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
 
-        return Ok(produtosDTO);
+            return Ok(produtosDTO);
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
+
     }
 
     [HttpGet("{id:int:min(1)}", Name="ObterProduto")]
