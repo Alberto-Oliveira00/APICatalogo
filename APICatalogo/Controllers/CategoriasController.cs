@@ -97,15 +97,28 @@ public class CategoriasController : ControllerBase
     [HttpGet("{id:int}", Name = "ObterCategoria")]
     public async Task<ActionResult<CategoriaDTO>> GetAsync(int id)
     {
-        var categoria = await _uof.CategoriaRepository.GetAsync(c => c.CategoriaId == id);
+        var CacheCategoriaKey = $"CacheCategoria_{id}"; 
 
-        if (categoria is null)
-        {
-            return NotFound($"Categoria com id= {id} não encontrada...");
+        if(!_cache.TryGetValue(CacheCategoriaKey, out CategoriaDTO? categoriaDto))
+        { 
+            var categoria = await _uof.CategoriaRepository.GetAsync(c => c.CategoriaId == id);
+
+            if (categoria is null)
+            {
+                return NotFound($"Categoria com id= {id} não encontrada...");
+            }
+    
+            categoriaDto = _mapper.Map<CategoriaDTO>(categoria);
+
+            var cacheOptions = new MemoryCacheEntryOptions()
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                SlidingExpiration = TimeSpan.FromSeconds(15),
+                Priority = CacheItemPriority.High
+            };
+
+            _cache.Set(CacheCategoriaKey, categoriaDto, cacheOptions);
         }
-
-        var categoriaDto = _mapper.Map<CategoriaDTO>(categoria);
-
         return Ok(categoriaDto);
     }
 
