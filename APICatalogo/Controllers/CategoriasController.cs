@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using X.PagedList;
 
@@ -22,22 +23,37 @@ public class CategoriasController : ControllerBase
     private readonly IUnitOfWork _uof;
     private readonly IMapper _mapper;
 
-    public CategoriasController(IUnitOfWork uof, IMapper mapper)
+    private readonly IMemoryCache _cache;
+    private const string CacheCategoriasKey = "CacheCategorias";
+
+    public CategoriasController(IUnitOfWork uof, IMapper mapper, IMemoryCache cache)
     {
         _uof = uof;
         _mapper = mapper;
+        _cache = cache;
     }
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetAsync()
     {
-        var categorias = await _uof.CategoriaRepository.GetAllAsync();
+        if(!_cache.TryGetValue(CacheCategoriasKey, out IEnumerable<CategoriaDTO>? categoriasDto))
+        {
+            var categorias = await _uof.CategoriaRepository.GetAllAsync();
 
-        if (categorias is null)
-            return NotFound();
+            if (categorias is null)
+                return NotFound();
 
-        var categoriasDto = _mapper.Map<IEnumerable<CategoriaDTO>>(categorias);
+            categoriasDto = _mapper.Map<IEnumerable<CategoriaDTO>>(categorias);
 
+            var cacheOptions = new MemoryCacheEntryOptions()
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                SlidingExpiration = TimeSpan.FromSeconds(15),
+                Priority = CacheItemPriority.High
+            };
+            _cache.Set(CacheCategoriasKey, categoriasDto, cacheOptions);
+        }
+        
         return Ok(categoriasDto);
     }
 
